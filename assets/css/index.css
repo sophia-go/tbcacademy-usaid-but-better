@@ -1,0 +1,30 @@
+html {
+  font-size: 10px;
+}
+
+#featured {
+  background-image: url("../img/featured.jpg");
+  height: 21.7rem;
+  width: 100%;
+}
+#featured h1 {
+  color: white;
+  font-size: 3.6rem;
+}
+
+#info {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: rgb(43, 43, 43);
+  font-size: 1.8rem;
+}
+#info p {
+  color: white;
+}
+#info a {
+  display: block;
+  color: rgb(0, 115, 255);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 3rem;
+}/*# sourceMappingURL=index.css.map */
