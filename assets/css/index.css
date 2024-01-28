@@ -74,6 +74,19 @@ button {
   padding: 0;
 }
 
+.header {
+  background-color: rgba(26, 30, 31, 0.9);
+  width: 100%;
+  z-index: 3;
+  font-family: "wf_dd28b3957391427eb54de1c9e";
+}
+.header .nav-link {
+  color: #fff;
+}
+.header .nav-link.active {
+  color: #00aeef;
+}
+
 #featured {
   background-image: url("../img/featured.jpg");
   height: 21.7rem;
@@ -249,5 +262,13 @@ button {
 @media (min-width: 1200px) {
   .container {
     max-width: 980px;
+  }
+  nav {
+    height: 8.4rem;
+    font-size: 1.4rem;
+  }
+  nav .nav-item {
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 }/*# sourceMappingURL=index.css.map */
