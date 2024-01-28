@@ -1,37 +1,5 @@
 @use "sass:map";
-
-@font-face {
-  font-display: block;
-  font-family: wf_f52303b2efea42e1b4aeed119;
-  src: url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff2/file.woff2")
-      format("woff2"),
-    url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/woff/file.woff")
-      format("woff"),
-    url("https://static.wixstatic.com/ufonts/643d94_f52303b2efea42e1b4aeed119e42672e/ttf/file.ttf")
-      format("ttf");
-}
-
-@font-face {
-  font-display: block;
-  font-family: wf_dd28b3957391427eb54de1c9e;
-  src: url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff2/file.woff2")
-      format("woff2"),
-    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/woff/file.woff")
-      format("woff"),
-    url("https://static.wixstatic.com/ufonts/643d94_dd28b3957391427eb54de1c9eff7cfb1/ttf/file.ttf")
-      format("ttf");
-}
-
-@font-face {
-  font-display: block;
-  font-family: wf_93c16d86ec9d47d0a2a36894f;
-  src: url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/woff2/file.woff2")
-      format("woff2"),
-    url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/woff/file.woff")
-      format("woff"),
-    url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/ttf/file.ttf")
-      format("ttf");
-}
+@use "./fonts";
 
 $colors: (
   "bg-light-gray": #2b2b2b,
@@ -39,6 +7,30 @@ $colors: (
   "bg-dark-green": #1a1e1f,
   "link-blue": #00aeef
 );
+
+.link {
+  font-family: "wf_7737b5e7be24426aa35c9f431";
+  font-size: 2rem;
+  color: map.get($colors, "link-blue");
+  text-decoration: none;
+  transition: color 0.4s ease 0s;
+
+  &:hover {
+    color: #aaaaaa;
+  }
+}
+
+.link-alt {
+  font-family: "wf_93c16d86ec9d47d0a2a36894f";
+  font-size: 1.6rem;
+  color: map.get($colors, "link-blue");
+  text-decoration: none;
+  transition: color 0.4s ease 0s;
+
+  &:hover {
+    color: #0081b0;
+  }
+}
 
 html {
   font-size: 10px;
@@ -77,7 +69,8 @@ button {
   .nav-link {
     color: #fff;
 
-    &.active {
+    &.active,
+    &:hover {
       color: map.get($colors, "link-blue");
     }
   }
@@ -112,10 +105,8 @@ button {
   }
 
   a {
+    @extend .link;
     display: block;
-    color: map.get($colors, "link-blue");
-    text-decoration: none;
-    font-weight: bold;
     margin-top: 3rem;
   }
 }
@@ -153,12 +144,9 @@ button {
     }
 
     a {
+      @extend .link-alt;
       display: block;
-      color: map.get($colors, "link-blue");
-      text-decoration: none;
-      font-size: 1.6rem;
       margin: auto 2rem 2rem 2rem;
-      font-family: "wf_93c16d86ec9d47d0a2a36894f";
     }
   }
 }
@@ -283,11 +271,12 @@ button {
   }
 
   .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
     font-size: 1.4rem;
     padding: 0 1.8rem;
     background-color: transparent;
-    display: none;
-    overflow: hidden;
   }
 }
 
@@ -366,5 +355,43 @@ footer {
       margin-right: 2rem;
       margin-left: 2rem;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #carousel .inner-carousel {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  #carousel .carousel-arrow {
+    display: none;
+  }
+
+  #carousel .carousel-item {
+    display: none;
+    position: static;
+    opacity: 1;
+    transform: none;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  #carousel .carousel-item--active {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #carousel .carousel-item > img {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #carousel .carousel-dots {
+    margin-top: 1rem;
   }
 }
