@@ -22,6 +22,17 @@
       format("ttf");
 }
 
+@font-face {
+  font-display: block;
+  font-family: wf_93c16d86ec9d47d0a2a36894f;
+  src: url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/woff2/file.woff2")
+      format("woff2"),
+    url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/woff/file.woff")
+      format("woff"),
+    url("https://static.wixstatic.com/ufonts/643d94_93c16d86ec9d47d0a2a36894fbdd54fd/ttf/file.ttf")
+      format("ttf");
+}
+
 $colors: (
   "bg-light-gray": #2b2b2b,
   "bg-dark-gray": #161616,
@@ -73,7 +84,7 @@ button {
 
 #featured {
   background-image: url("../img/featured.jpg");
-  height: 21.7rem;
+  height: 35.2rem;
   width: 100%;
   font-family: "wf_f52303b2efea42e1b4aeed119";
   line-height: 1.6em;
@@ -83,7 +94,7 @@ button {
   }
 
   h1 {
-    font-size: 3.6rem;
+    font-size: 4.2rem;
   }
 }
 
@@ -114,27 +125,39 @@ button {
   .course {
     border: 1px solid rgba(206, 206, 206, 0.3);
     border-radius: 10px;
+    height: 41.6rem;
     margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
 
     img {
       width: 100%;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
       margin-bottom: 1rem;
     }
 
     h3,
     h4 {
       margin: 1.5rem 2rem;
+      font-family: "wf_dd28b3957391427eb54de1c9e";
+    }
+
+    h3 {
       font-size: 1.8rem;
+    }
+
+    h4 {
+      font-size: 1.4rem;
     }
 
     a {
       display: block;
       color: map.get($colors, "link-blue");
       text-decoration: none;
-      font-weight: bold;
-      margin: 3rem 2rem;
+      font-size: 1.6rem;
+      margin: auto 2rem 2rem 2rem;
+      font-family: "wf_93c16d86ec9d47d0a2a36894f";
     }
   }
 }
@@ -237,6 +260,7 @@ button {
 
 #faq {
   background: map.get($colors, "bg-dark-gray");
+  font-family: "wf_dd28b3957391427eb54de1c9e";
 
   .accordion {
     font-size: 1.8rem;
