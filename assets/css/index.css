@@ -185,4 +185,10 @@ h2 {
   background-color: transparent;
   display: none;
   overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 980px;
+  }
 }/*# sourceMappingURL=index.css.map */
