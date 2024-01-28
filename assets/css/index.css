@@ -4,6 +4,7 @@ html {
 
 body {
   font-size: 1.8rem;
+  color: #fff;
 }
 
 .row > * {
@@ -17,17 +18,13 @@ body {
   width: 100%;
 }
 #featured h1 {
-  color: white;
   font-size: 3.6rem;
 }
 
 #info {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: rgb(43, 43, 43);
-}
-#info p {
-  color: white;
+  background-color: #2b2b2b;
 }
 #info a {
   display: block;
@@ -39,7 +36,6 @@ body {
 
 #courses {
   background: #161616;
-  color: white;
 }
 #courses h2 {
   margin: 2rem 0;
@@ -68,4 +64,40 @@ body {
   text-decoration: none;
   font-weight: bold;
   margin: 3rem 2rem;
+}
+
+#carousel {
+  background-color: #2b2b2b;
+}
+#carousel h2 {
+  margin: 2rem 0;
+  font-size: 3.6rem;
+}
+#carousel .slick-prev,
+#carousel .slick-next {
+  background: none;
+  border: none;
+  opacity: 0.5;
+}
+#carousel .slick-prev img,
+#carousel .slick-next img {
+  height: 35px;
+  width: 150px;
+}
+#carousel .slick-dots {
+  display: flex;
+  flex-direction: row;
+}
+#carousel .slick-dots li button {
+  font-size: 0;
+}
+
+.slick-track {
+  display: flex;
+}
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */
