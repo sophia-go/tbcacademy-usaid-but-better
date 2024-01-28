@@ -51,6 +51,7 @@ html {
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.8rem;
   color: #fff;
 }
@@ -64,6 +65,13 @@ h2 {
   margin: 2rem 0 !important;
   font-family: "wf_dd28b3957391427eb54de1c9e";
   font-size: 2.4rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
 }
 
 #featured {
@@ -130,33 +138,84 @@ h2 {
 #carousel {
   background-color: #2b2b2b;
 }
-#carousel .slick-prev,
-#carousel .slick-next {
-  background: none;
-  border: none;
-  opacity: 0.5;
-}
-#carousel .slick-prev img,
-#carousel .slick-next img {
-  height: 35px;
-  width: 150px;
-}
-#carousel .slick-dots {
+#carousel .inner-carousel {
+  width: 100%;
+  height: 22.4rem;
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
-}
-#carousel .slick-dots li button {
-  font-size: 0;
-}
-
-.slick-track {
-  display: flex !important;
-}
-.slick-track .slick-slide {
-  display: flex !important;
-  height: auto;
+  justify-content: space-between;
   align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+#carousel .carousel-arrow {
+  width: 2.5rem;
+  height: 4.5rem;
+  position: absolute;
+  cursor: pointer;
+  left: -8rem;
+}
+#carousel .carousel-arrow > svg {
+  fill: #fff;
+  transition: fill 0.3s ease;
+}
+#carousel .carousel-arrow > svg:hover {
+  fill: #a9a9a9;
+}
+#carousel .carousel-arrow--right {
+  transform: rotate(180deg);
+  right: -8rem;
+  left: auto;
+}
+#carousel .carousel-content {
+  width: 100%;
+}
+#carousel .carousel-item {
+  width: 100%;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 14rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+#carousel .carousel-item > img {
+  width: 25rem;
+  height: 7.4rem;
+}
+#carousel .carousel-item--active {
+  display: flex;
+  opacity: 1;
+}
+#carousel .carousel-dots {
+  bottom: 3rem;
+  width: 10rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+#carousel .carousel-dots .carousel-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#carousel .carousel-dots .carousel-dot:hover {
+  background-color: #a9a9a9;
+}
+#carousel .carousel-dots .carousel-dot--active {
+  background-color: var(--hover-color);
 }
 
 #faq {
