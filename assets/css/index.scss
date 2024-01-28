@@ -36,6 +36,7 @@
 $colors: (
   "bg-light-gray": #2b2b2b,
   "bg-dark-gray": #161616,
+  "bg-dark-green": #1a1e1f,
   "link-blue": #00aeef
 );
 
@@ -287,6 +288,68 @@ button {
     background-color: transparent;
     display: none;
     overflow: hidden;
+  }
+}
+
+footer {
+  background-color: map.get($colors, "bg-dark-green");
+  font-family: "wf_dd28b3957391427eb54de1c9e";
+
+  .custom-footer-container {
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 5rem 0 3rem 0;
+
+      .footer-logo {
+        height: 30px;
+      }
+
+      .footer-social-icons {
+        img {
+          width: 3.9rem;
+          height: 3.9rem;
+        }
+      }
+    }
+
+    .footer-middle {
+      padding-bottom: 2rem;
+      font-size: 1.4rem;
+    }
+
+    .footer-bottom {
+      padding-bottom: 5rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.4rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: rgb(170, 170, 170);
+        }
+      }
+
+      button {
+        background-color: #00aef3;
+        color: white;
+        cursor: pointer;
+        border-radius: 6%;
+        border: none;
+        transition: 0.3s ease;
+        width: 16rem;
+        height: 4.5rem;
+        font-size: 1.6rem;
+
+        &:hover {
+          color: black;
+          background-color: lightgray;
+        }
+      }
+    }
   }
 }
 

@@ -237,6 +237,55 @@ button {
   overflow: hidden;
 }
 
+footer {
+  background-color: #1a1e1f;
+  font-family: "wf_dd28b3957391427eb54de1c9e";
+}
+footer .custom-footer-container .footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0 3rem 0;
+}
+footer .custom-footer-container .footer-top .footer-logo {
+  height: 30px;
+}
+footer .custom-footer-container .footer-top .footer-social-icons img {
+  width: 3.9rem;
+  height: 3.9rem;
+}
+footer .custom-footer-container .footer-middle {
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+}
+footer .custom-footer-container .footer-bottom {
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+footer .custom-footer-container .footer-bottom a {
+  color: white;
+  text-decoration: none;
+}
+footer .custom-footer-container .footer-bottom a:hover {
+  color: rgb(170, 170, 170);
+}
+footer .custom-footer-container .footer-bottom button {
+  background-color: #00aef3;
+  color: white;
+  cursor: pointer;
+  border-radius: 6%;
+  border: none;
+  transition: 0.3s ease;
+  width: 16rem;
+  height: 4.5rem;
+  font-size: 1.6rem;
+}
+footer .custom-footer-container .footer-bottom button:hover {
+  color: black;
+  background-color: lightgray;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 980px;
